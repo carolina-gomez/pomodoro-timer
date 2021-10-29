@@ -130,6 +130,13 @@ function Pomodoro() {
         setBreakDuration(state => state - 1);   
     }
 
+    /**
+   * Handle Stop Button
+   */
+     function handleStop () {
+      
+    }
+
   return (
     <div className="pomodoro">
       <div className="row">
@@ -221,6 +228,8 @@ function Pomodoro() {
               className="btn btn-secondary"
               data-testid="stop"
               title="Stop the session"
+              onClick={handleStop}
+              disabled={!session}
             >
               <span className="oi oi-media-stop" />
             </button>

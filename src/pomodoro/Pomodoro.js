@@ -134,7 +134,8 @@ function Pomodoro() {
    * Handle Stop Button
    */
      function handleStop () {
-      
+      setIsTimerRunning(false);
+      setSession(null);
     }
 
   return (

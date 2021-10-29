@@ -59,7 +59,6 @@ function Pomodoro() {
   // ToDo: Allow the user to adjust the focus and break duration.
   const [focusDuration, setFocusDuration] = useState(25);
   const [breakDuration, setBreakDuration] = useState(5);
-  console.log(focusDuration)
 
   /**
    * Custom hook that invokes the callback function every second
@@ -102,41 +101,33 @@ function Pomodoro() {
   /**
    * Increases focusDuration
    */
-  function handleIncreaseFocus (focusDuration) {
-    if (focusDuration >= 60) {return};
-    return (
-      setFocusDuration(state => state + 5)
-    )
+  function handleIncreaseFocus () {
+    if (focusDuration === 60) return;
+      setFocusDuration(state => state + 5);
   }
 
     /**
    * Decrease focusDuration
    */
-     function handleDecreaseFocus (focusDuration) {
-      if (focusDuration <= 5) {return};
-      return (
-        setFocusDuration(state => state - 5)
-      )
+     function handleDecreaseFocus () {
+      if (focusDuration === 5) return;
+        setFocusDuration(state => state - 5);
     }
 
       /**
    * Increases breakDuration
    */
-  function handleIncreaseBreak (breakDuration) {
-    if (breakDuration >= 15) {return};
-    return (
-      setBreakDuration(state => state + 1)
-      )
+  function handleIncreaseBreak () {
+    if (breakDuration >= 15) return;
+      setBreakDuration(state => state + 1);
   }
 
     /**
    * Decrease breakDuration
    */
-     function handleDecreaseBreak (breakDuration) {
-      if (breakDuration <= 1) {return};
-      return (
-        setBreakDuration(state => state - 1)
-        )
+     function handleDecreaseBreak () {
+      if (breakDuration <= 1) return;
+        setBreakDuration(state => state - 1);   
     }
 
   return (

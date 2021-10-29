@@ -153,6 +153,7 @@ function Pomodoro() {
                 className="btn btn-secondary"
                 data-testid="decrease-focus"
                 onClick={handleDecreaseFocus}
+                disabled={session}
               >
                 <span className="oi oi-minus" />
               </button>
@@ -162,6 +163,7 @@ function Pomodoro() {
                 className="btn btn-secondary"
                 data-testid="increase-focus"
                 onClick={handleIncreaseFocus}
+                disabled={session}
               >
                 <span className="oi oi-plus" />
               </button>
@@ -182,6 +184,7 @@ function Pomodoro() {
                   className="btn btn-secondary"
                   data-testid="decrease-break"
                   onClick={handleDecreaseBreak}
+                  disabled={session}
                 >
                   <span className="oi oi-minus" />
                 </button>
@@ -191,6 +194,7 @@ function Pomodoro() {
                   className="btn btn-secondary"
                   data-testid="increase-break"
                   onClick={handleIncreaseBreak}
+                  disabled={session}
                 >
                   <span className="oi oi-plus" />
                 </button>

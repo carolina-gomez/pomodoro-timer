@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ProgressBar({ session,currentDuration }) {
-    let value = 100 - Math.floor((100 * session?.timeRemaining) / (currentDuration * 60))
+    const value = 100 - Math.floor((100 * session?.timeRemaining) / (currentDuration * 60))
 
     return (
         <div className="progress" style={{ height: "20px" }}>
